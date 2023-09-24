@@ -26,7 +26,7 @@ pipeline {
                 dir=artifacte
                 if [ -d "$dir" ] 
                 then
-                    "
+               
                     cp target/spring-petclinic-*-SNAPSHOT.jar artifacte 
                     cd artifacte 
 
