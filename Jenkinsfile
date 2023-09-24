@@ -27,7 +27,7 @@ pipeline {
                 then
                 
                     cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifacte 
-                    cd artifact 
+                    cd artifacte 
                     git status 
                     git add . 
                     git commit -m "adding artifact"
@@ -39,7 +39,7 @@ pipeline {
 
 
                     cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifacte 
-                    cd artifact 
+                    cd artifacte 
                     git status 
                     git add . 
                     git commit -m "adding artifact"
