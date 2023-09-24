@@ -27,7 +27,7 @@ pipeline {
                 if [ -d "$dir" ] 
                 then
                     "
-                    cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifacte 
+                    cp target/spring-petclinic-*-SNAPSHOT.jar artifacte 
                     cd artifacte 
 
                     git status 
@@ -42,7 +42,7 @@ pipeline {
                     git config --global user.name "lcisystems"
                     git config --global user.email "rzdin@lcisystems.com
 
-                    cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifacte 
+                    cp target/spring-petclinic-*-SNAPSHOT.jar artifacte 
                     cd artifacte 
                     git status 
                     git add . 
