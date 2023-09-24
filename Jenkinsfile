@@ -25,7 +25,8 @@ pipeline {
                 dir=artifacte
                 if [ -d "$dir" ] 
                 then
-                
+                    git config --global user.name "lcisystems"
+                    git config --global user.email "rzdin@lcisystems.com"
                     cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifacte 
                     cd artifacte 
                   
@@ -35,7 +36,8 @@ pipeline {
                     git push
                 else 
 
-
+                    git config --global user.name "lcisystems"
+                    git config --global user.email "rzdin@lcisystems.com"
                     git clone https://github.com/lcisystems/artifacte.git
 
 
