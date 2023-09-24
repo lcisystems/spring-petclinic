@@ -26,7 +26,7 @@ pipeline {
                 dir=artifacte
                 if [ -d "$dir" ] 
                 then
-                   
+                    git config --global --add safe.directory '/var/lib/jenkins/workspace/USDA poc/artifacte'
                     cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifacte 
                     cd artifacte 
 
@@ -38,7 +38,7 @@ pipeline {
                     git push
                 else 
 
-                    
+                    git config --global --add safe.directory '/var/lib/jenkins/workspace/USDA poc/artifacte'
                     git clone https://github.com/lcisystems/artifacte.git
 
 
