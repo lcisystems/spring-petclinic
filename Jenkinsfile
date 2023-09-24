@@ -26,29 +26,27 @@ pipeline {
                 dir=artifacte
                 if [ -d "$dir" ] 
                 then
-                    git config --global --add safe.directory '/var/lib/jenkins/workspace/USDA poc/artifacte'
+                    "
                     cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifacte 
                     cd artifacte 
 
                     git status 
                     git add . 
                     git commit -m "adding artifact"
-                    git config --global user.name "lcisystems"
-                    git config --global user.email "rzdin@lcisystems.com"
                     git push
                 else 
 
                     git config --global --add safe.directory '/var/lib/jenkins/workspace/USDA poc/artifacte'
                     git clone https://github.com/lcisystems/artifacte.git
-
+                    cd artifacte
+                    git config --global user.name "lcisystems"
+                    git config --global user.email "rzdin@lcisystems.com
 
                     cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifacte 
                     cd artifacte 
                     git status 
                     git add . 
                     git commit -m "adding artifact"
-                    git config --global user.name "lcisystems"
-                    git config --global user.email "rzdin@lcisystems.com"
                     git push
                 fi 
                 
