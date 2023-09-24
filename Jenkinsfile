@@ -32,7 +32,7 @@ pipeline {
                     git add . 
                     git commit -m "first commit"
                     git branch -M main
-                    git remote add origin https://github.com/lcisystems/artifacte.git
+                   
                     git push -u origin main
 
                 else 
@@ -46,7 +46,7 @@ pipeline {
                     git add . 
                     git commit -m "first commit"
                     git branch -M main
-                    git remote add origin https://github.com/lcisystems/artifacte.git
+                 
                     git push -u origin main
                 fi 
                 
