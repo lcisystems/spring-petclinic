@@ -22,22 +22,23 @@ pipeline {
              
             steps {
                 sh '''
+
                 dir=artifacte
                 if [ -d "$dir" ] 
                 then
-                    git config --global user.name "lcisystems"
-                    git config --global user.email "rzdin@lcisystems.com"
+                   
                     cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifacte 
                     cd artifacte 
-                  
+
                     git status 
                     git add . 
                     git commit -m "adding artifact"
+                    git config --global user.name "lcisystems"
+                    git config --global user.email "rzdin@lcisystems.com"
                     git push
                 else 
 
-                    git config --global user.name "lcisystems"
-                    git config --global user.email "rzdin@lcisystems.com"
+                    
                     git clone https://github.com/lcisystems/artifacte.git
 
 
@@ -46,6 +47,8 @@ pipeline {
                     git status 
                     git add . 
                     git commit -m "adding artifact"
+                    git config --global user.name "lcisystems"
+                    git config --global user.email "rzdin@lcisystems.com"
                     git push
                 fi 
                 
