@@ -22,13 +22,29 @@ pipeline {
              
             steps {
                 sh '''
-                git clone https://github.com/lcisystems/artifacte.git
-                cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifact 
-                cd artifact 
-                git status 
-                git add . 
-                git commit -m "adding artifact"
-                git push
+                dir=artifact
+                if [-d $dir] 
+                then
+                
+                    cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifact 
+                    cd artifact 
+                    git status 
+                    git add . 
+                    git commit -m "adding artifact"
+                    git push
+                else 
+
+
+                    git clone https://github.com/lcisystems/artifacte.git
+
+
+                    cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifact 
+                    cd artifact 
+                    git status 
+                    git add . 
+                    git commit -m "adding artifact"
+                    git push
+                fi 
                 
                 '''
             }
