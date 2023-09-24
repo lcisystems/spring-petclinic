@@ -27,7 +27,7 @@ pipeline {
                 if [ -d "$dir" ] 
                 then
                
-                    cp target/spring-petclinic-*-SNAPSHOT.jar artifacte 
+                    cp target/*-SNAPSHOT.jar artifacte 
                     cd artifacte 
                     git add . 
                     git commit -m "first commit"
@@ -41,7 +41,7 @@ pipeline {
                     git config --global user.name "lcisystems"
                     git config --global user.email "rzdin@lcisystems.com"
 
-                    cp target/spring-petclinic-*-SNAPSHOT.jar artifacte 
+                    cp target/*-SNAPSHOT.jar artifacte 
                     cd artifacte 
                     git add . 
                     git commit -m "first commit"
