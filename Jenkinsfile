@@ -22,7 +22,7 @@ pipeline {
              
             steps {
                 sh '''
-                dir=artifact
+                dir=artifacte
                 if [-d "$dir"] 
                 then
                 
