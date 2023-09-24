@@ -38,7 +38,7 @@ pipeline {
                     git clone https://github.com/lcisystems/artifacte.git
 
 
-                    cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifact 
+                    cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifacte 
                     cd artifact 
                     git status 
                     git add . 
