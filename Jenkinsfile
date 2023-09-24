@@ -23,7 +23,7 @@ pipeline {
             steps {
                 sh '''
                 dir=artifacte
-                if [-d "$dir"] 
+                if [ -d "$dir" ] 
                 then
                 
                     cp target/spring-petclinic-3.1.0-SNAPSHOT.jar artifact 
