@@ -2,7 +2,7 @@ pipeline {
 	agent any
     // Defined tools to build Spring Boot Java Application. 
        tools { 
-                     maven 'maven' 
+                     maven 'Maven' 
                      jdk 'JAVA_HOME' 
    }
   	stages {
