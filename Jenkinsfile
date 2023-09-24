@@ -39,7 +39,7 @@ pipeline {
                     git clone https://github.com/lcisystems/artifacte.git
                     cd artifacte
                     git config --global user.name "lcisystems"
-                    git config --global user.email "rzdin@lcisystems.com
+                    git config --global user.email "rzdin@lcisystems.com"
 
                     cp target/spring-petclinic-*-SNAPSHOT.jar artifacte 
                     cd artifacte 
