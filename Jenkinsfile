@@ -29,14 +29,13 @@ pipeline {
                
                     cp target/spring-petclinic-*-SNAPSHOT.jar artifacte 
                     cd artifacte 
-
-                    git status 
                     git add . 
-                    git commit -m "adding artifact"
-                    git push
-                else 
+                    git commit -m "first commit"
+                    git branch -M main
+                    git remote add origin https://github.com/lcisystems/artifacte.git
+                    git push -u origin main
 
-                    git config --global --add safe.directory '/var/lib/jenkins/workspace/USDA poc/artifacte'
+                else 
                     git clone https://github.com/lcisystems/artifacte.git
                     cd artifacte
                     git config --global user.name "lcisystems"
@@ -44,10 +43,11 @@ pipeline {
 
                     cp target/spring-petclinic-*-SNAPSHOT.jar artifacte 
                     cd artifacte 
-                    git status 
                     git add . 
-                    git commit -m "adding artifact"
-                    git push
+                    git commit -m "first commit"
+                    git branch -M main
+                    git remote add origin https://github.com/lcisystems/artifacte.git
+                    git push -u origin main
                 fi 
                 
                 '''
